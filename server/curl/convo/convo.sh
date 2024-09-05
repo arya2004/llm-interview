@@ -2,6 +2,7 @@
 # Create room
 curl -X POST http://127.0.0.1:5000/create_room -H "Content-Type: application/json" -d '{"room_id": "InterviewRoom1"}'
 
+sleep 2
 
 # Append conversation
 
@@ -11,6 +12,7 @@ curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: applica
   "text": "Welcome, thank you for joining us today. Could you please introduce yourself?"
 }'
 
+sleep 2
 
 curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: application/json" -d '{
   "room_id": "InterviewRoom1", 
@@ -18,6 +20,7 @@ curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: applica
   "text": "Thank you for having me. My name is John Doe, and I have over 5 years of experience in software engineering, specifically in backend development and cloud computing."
 }'
 
+sleep 2
 
 curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: application/json" -d '{
   "room_id": "InterviewRoom1", 
@@ -26,6 +29,7 @@ curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: applica
   "text": "Great to meet you, John. Can you tell us about a challenging project you worked on and how you overcame the difficulties?"
 }'
 
+sleep 2
 
 curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: application/json" -d '{
   "room_id": "InterviewRoom1", 
@@ -33,12 +37,16 @@ curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: applica
   "text": "One of the most challenging projects I worked on was a large-scale migration to the cloud. We faced several challenges, including performance optimization and ensuring data integrity during the migration. I led a team that conducted extensive testing and implemented new strategies for load balancing and data encryption, ensuring the project was delivered on time."
 }'
 
+sleep 2
 
 curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: application/json" -d '{
   "room_id": "InterviewRoom1", 
   "person_name": "Interviewer 1", 
   "text": "That sounds impressive! What technologies do you enjoy working with the most?"
 }'
+
+
+sleep 2
 
 curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: application/json" -d '{
   "room_id": "InterviewRoom1", 
@@ -47,6 +55,7 @@ curl -X POST http://127.0.0.1:5000/append_conversation -H "Content-Type: applica
 }'
 
 
+sleep 2
 
 # Generate summary
 curl -X POST http://127.0.0.1:5000/generate_summary -H "Content-Type: application/json" -d '{"room_id": "InterviewRoom1"}'
